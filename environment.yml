@@ -1,0 +1,7 @@
+name: birge
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - matplotlib
+  - seaborn
