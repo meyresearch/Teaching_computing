@@ -1,7 +1,8 @@
-name: birge
+name: teaching
 channels:
   - conda-forge
 dependencies:
   - numpy
   - matplotlib
   - seaborn
+  - rise

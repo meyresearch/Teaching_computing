@@ -78,6 +78,16 @@ def data_input():
     return form
 
 def plot_birge_sponer(form = None, transition_wave_number=None, vib_quantum_number=None):
+    r"""Plot Birge Sponer plot from wave numbers and virbational quantum numbers
+    Parameters
+    ----------
+    form : ipywidget form
+        Data from a form that can be interacted with in notebook
+    transition_wave_number : 1-D numpy array
+        y-data for Birge Sponer Plot
+    vib_quantum_number : 1-D numpy array
+        x-data for Birge Sponer Plot containing vibrational qunatum numbers
+    """
     if transition_wave_number is None or vib_quantum_number is None:
         if form is None:
             print('Please populate form')
@@ -93,6 +103,20 @@ def plot_birge_sponer(form = None, transition_wave_number=None, vib_quantum_numb
     sbn.despine()
 
 def plot_extrapolated_birge_sponer(form = None, transition_wave_number=None, vib_quantum_number=None, shaded = True):
+    r"""Plot Birge Sponer plot from wave numbers and virbational quantum numbers with linear extrapolation
+    Parameters
+    ----------
+    form : ipywidget form
+        Data from a form that can be interacted with in notebook
+    transition_wave_number : 1-D numpy array
+        y-data for Birge Sponer Plot
+    vib_quantum_number : 1-D numpy array
+        x-data for Birge Sponer Plot containing vibrational qunatum numbers
+    shaded : Boolean
+        Shade area under curve 
+        Default = True
+    """
+
     if transition_wave_number is None or vib_quantum_number is None:
         if form is None:
             print('Please populate form')
